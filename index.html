@@ -1,131 +1,184 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual de Marca: Poker</title>
+    <title>Análisis de Marca Bavaria</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
-        /* Estilos personalizados y patrón de fondo */
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #fefefd;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fefefd; /* Contenedor principal blanco */
+            color: #000000; /* Texto oscuro para mejor legibilidad */
+            /* Patrón de fondo sutil de rombos y picas (ajustado para ser más visible) */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 0L65 25L50 50L35 25L50 0Z' fill='%23d1d1d1' opacity='0.8'/%3E%3Cpath d='M50 100L65 75L50 50L35 75L50 100Z' fill='%23d1d1d1' opacity='0.8'/%3E%3Cpath d='M25 50L40 75L25 100L10 75L25 50Z' fill='%23d1d1d1' opacity='0.8'/%3E%3Cpath d='M75 50L90 75L75 100L60 75L75 50Z' fill='%23d1d1d1' opacity='0.8'/%3E%3C/svg%3E");
         }
-
-        h1, h2, h3, .font-display {
-            font-family: 'Roboto Slab', serif;
+        .container {
+            max-width: 960px;
+            margin: auto;
+            padding: 2rem;
+            background-color: #fefefd; /* Contenedor principal blanco */
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
-
-        /* --- Patrón de Naipes --- */
-        .pattern-bg {
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill-opacity='0.1'%3E%3Cpath d='M30 30c0-1.105.895-2 2-2s2 .895 2 2v2c0 1.105-.895 2-2 2s-2-.895-2-2v-2zm-2 2c1.105 0 2-.895 2-2s-.895-2-2-2h-2c-1.105 0-2 .895-2 2s.895 2 2 2h2zm-10-8c0-1.105.895-2 2-2s2 .895 2 2v2c0 1.105-.895 2-2 2s-2-.895-2-2v-2zm-2 2c1.105 0 2-.895 2-2s-.895-2-2-2h-2c-1.105 0-2 .895-2 2s.895 2 2 2h2zm20 16c0-1.105.895-2 2-2s2 .895 2 2v2c0 1.105-.895 2-2 2s-2-.895-2-2v-2zm-2 2c1.105 0 2-.895 2-2s-.895-2-2-2h-2c-1.105 0-2 .895-2 2s.895 2 2 2h2zm-20-4c0-1.105.895-2 2-2s2 .895 2 2v2c0 1.105-.895 2-2 2s-2-.895-2-2v-2zm-2 2c1.105 0 2-.895 2-2s-.895-2-2-2h-2c-1.105 0-2 .895-2 2s.895 2 2 2h2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            color: #e31b25;
+            text-transform: uppercase;
         }
-        
-        .pattern-bg-red {
+        .section-title {
+            color: #e31b25;
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 4px;
             background-color: #e31b25;
-            color: #fefefd;
         }
-
-        .pattern-bg-black {
-            background-color: #000000;
-            color: #fefefd;
+        .list-item {
+            margin-bottom: 1.5rem;
         }
-
-        .pattern-bg-white {
-            background-color: #fefefd;
-            color: #000000;
-        }
-        
-        .pattern-bg-red .pattern-bg,
-        .pattern-bg-black .pattern-bg {
-             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23fefefd' fill-opacity='0.05'%3E%3Cpath d='M30 30c0-1.105.895-2 2-2s2 .895 2 2v2c0 1.105-.895 2-2 2s-2-.895-2-2v-2zm-2 2c1.105 0 2-.895 2-2s-.895-2-2-2h-2c-1.105 0-2 .895-2 2s.895 2 2 2h2zm-10-8c0-1.105.895-2 2-2s2 .895 2 2v2c0 1.105-.895 2-2 2s-2-.895-2-2v-2zm-2 2c1.105 0 2-.895 2-2s-.895-2-2-2h-2c-1.105 0-2 .895-2 2s.895 2 2 2h2zm20 16c0-1.105.895-2 2-2s2 .895 2 2v2c0 1.105-.895 2-2 2s-2-.895-2-2v-2zm-2 2c1.105 0 2-.895 2-2s-.895-2-2-2h-2c-1.105 0-2 .895-2 2s.895 2 2 2h2zm-20-4c0-1.105.895-2 2-2s2 .895 2 2v2c0 1.105-.895 2-2 2s-2-.895-2-2v-2zm-2 2c1.105 0 2-.895 2-2s-.895-2-2-2h-2c-1.105 0-2 .895-2 2s.895 2 2 2h2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-
-        .pattern-bg-white .pattern-bg {
-             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.05'%3E%3Cpath d='M30 30c0-1.105.895-2 2-2s2 .895 2 2v2c0 1.105-.895 2-2 2s-2-.895-2-2v-2zm-2 2c1.105 0 2-.895 2-2s-.895-2-2-2h-2c-1.105 0-2 .895-2 2s.895 2 2 2h2zm-10-8c0-1.105.895-2 2-2s2 .895 2 2v2c0 1.105-.895 2-2 2s-2-.895-2-2v-2zm-2 2c1.105 0 2-.895 2-2s-.895-2-2-2h-2c-1.105 0-2 .895-2 2s.895 2 2 2h2zm20 16c0-1.105.895-2 2-2s2 .895 2 2v2c0 1.105-.895 2-2 2s-2-.895-2-2v-2zm-2 2c1.105 0 2-.895 2-2s-.895-2-2-2h-2c-1.105 0-2 .895-2 2s.895 2 2 2h2zm-20-4c0-1.105.895-2 2-2s2 .895 2 2v2c0 1.105-.895 2-2 2s-2-.895-2-2v-2zm-2 2c1.105 0 2-.895 2-2s-.895-2-2-2h-2c-1.105 0-2 .895-2 2s.895 2 2 2h2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        .list-title {
+            color: #e31b25;
+            font-weight: bold; /* Título de lista ahora en negrita para destacar el color */
         }
     </style>
 </head>
-<body class="text-gray-800">
+<body class="bg-gray-100 text-gray-800">
 
-    <!-- Header Section -->
-    <header class="pattern-bg-black">
-        <div class="container mx-auto px-6 py-12 text-center pattern-bg">
-            <h1 class="text-5xl md:text-7xl font-black uppercase tracking-wider text-white">Manual de Marca</h1>
-             <!-- Logo SVG -->
-            <div class="max-w-xs mx-auto mt-4">
-                 <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
-                    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="'Roboto Slab', serif" font-size="45" font-weight="900" fill="#fefefd" letter-spacing="2">
-                        POKER
-                    </text>
-                    <rect x="0" y="52" width="200" height="4" fill="#e31b25"/>
-                </svg>
-            </div>
-        </div>
+<div class="container bg-white shadow-xl rounded-lg">
+    <header class="py-6">
+        <h1 class="title text-4xl text-center">BAVARIA: ESTRATEGIAS DE MARCA Y ARQUITECTURA</h1>
     </header>
 
-    <main class="container mx-auto px-6 py-16">
+    <main class="space-y-12">
+        <!-- Imágenes representativas -->
         
-        <!-- Introduction Section -->
-        <section class="mb-16 text-center max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold mb-4">Nuestra Identidad</h2>
-            <p class="text-lg text-gray-600">Este manual establece las pautas para el uso correcto de la identidad visual de la marca Poker. Nuestro objetivo es asegurar consistencia, reconocimiento y una comunicación clara en todos los puntos de contacto con nuestros consumidores.</p>
-        </section>
 
-        <!-- Events Section -->
-        <section id="eventos" class="mb-16">
-            <h3 class="font-display text-2xl font-bold border-b-4 border-red-600 pb-2 mb-8 inline-block">1. Eventos y Experiencias</h3>
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                    <h4 class="font-bold text-xl mb-2">Conectando a través de la emoción</h4>
-                    <p>Poker se hace presente en los momentos que unen a los amigos. Patrocinamos y creamos eventos que giran en torno a la música, el deporte y la cultura local, desde grandes festivales hasta torneos de barrio. Buscamos generar experiencias memorables donde la amistad y la diversión son los protagonistas, fortaleciendo el vínculo emocional con nuestra comunidad.</p>
-                </div>
-                <div class="pattern-bg-red rounded-lg shadow-lg p-2 pattern-bg">
-                    <img src="https://placehold.co/600x400/e31b25/fefefd?text=Concierto+Poker" alt="[Imagen de un concierto patrocinado por Poker]" class="rounded-md w-full h-auto">
-                </div>
-            </div>
-        </section>
+        <!-- Eventos y Experiencias de Marca Section -->
+        <div>
+            <h2 class="section-title text-3xl">Eventos y experiencias de marca</h2>
+            
+            <img src="https://media.licdn.com/dms/image/v2/C4E22AQFt-KSYfeljNg/feedshare-shrink_800/feedshare-shrink_800/0/1660143620556?e=2147483647&v=beta&t=SoqMPSUEDziOt5fgry53g7lmpO1KuIIWHw-GhoWoct4" alt="Personas interactuando en un stand de cerveza en un evento." class="w-full md:w-1/3 rounded-lg shadow-md float-right ml-6 mb-3">
+            
+            <p class="mb-4">
+                Bavaria utiliza eventos y experiencias de marca como herramientas fundamentales para conectar con sus consumidores y promocionar su portafolio de productos. Estas estrategias van más allá de la publicidad tradicional, buscando generar interacciones significativas y construir una relación emocional con el público. Algunas de las tácticas clave que se han identificado son:
+            </p>
+            <ul class="space-y-4">
+                <li class="list-item">
+                    <span class="list-title" style="color: #e31b25; font-weight: bold;">Patrocinio de grandes festivales:</span>
+                    <span>La compañía ha sido un aliado estratégico en eventos de gran magnitud como el Festival Estéreo Picnic (FEP). Durante estos festivales, Bavaria no solo se limita a promocionar sus marcas, sino que también apoya activamente iniciativas de sostenibilidad, como la gestión de residuos sólidos y la implementación de tecnologías de energía limpia. Este enfoque le permite asociar sus marcas con valores de responsabilidad social y conciencia ambiental.</span>
+                </li>
+                <li class="list-item flex flex-row-reverse items-start gap-4">
+                    <img src="https://enalimentos.lat/images/noticias/2024-3/bavaria-participara.jpg" alt="Personas en un stand de Bavaria durante un festival, representando la sostenibilidad." class="w-1/3 rounded-lg shadow-md">
+                    <div class="flex-1">
+                        <span class="list-title" style="color: #e31b25; font-weight: bold;">Activaciones creativas en eventos:</span>
+                        <span>En festivales como el FEP, las marcas del portafolio de Bavaria crean activaciones innovadoras y atractivas. Estas experiencias inmersivas buscan generar emociones, fomentar la interacción directa y construir relaciones duraderas con el público. Por ejemplo, Budweiser ha creado "booths" inmersivos, mientras que otras marcas han ofrecido experiencias gastronómicas o rituales de consumo específicos.</span>
+                    </div>
+                </li>
+                
+                <li class="list-item flex flex-row-reverse items-start gap-4">
+                    <img src="https://viajaporcolombia.com/images/villavicencio-coleo.jpg" alt="Villavicencio Coleo" class="w-1/3 rounded-lg shadow-md">
+                    <div class="flex-1">
+                        <span class="list-title" style="color: #e31b25; font-weight: bold;">Eventos internos y convenciones:</span>
+                        <span>Además de los eventos públicos, Bavaria organiza convenciones para sus colaboradores con el fin de fortalecer la cultura interna de la compañía y construir marca desde adentro. Estos eventos incluyen shows artísticos y experiencias inmersivas que refuerzan la identidad de las diferentes marcas del portafolio.</span>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <span class="list-title" style="color: #e31b25; font-weight: bold;">Apoyo a eventos locales y regionales:</span>
+                    <span>La marca fortalece su presencia en el mercado colombiano a través del apoyo a festivales y fiestas a nivel nacional, como la Feria de Bucaramanga y el Encuentro de Coleo en Villavicencio. Este enfoque le permite conectar con públicos regionales y mantener una fuerte presencia en la cultura local.</span>
+                </li>
+                <div style="clear: both;"></div>
+                <li class="list-item flex flex-row-reverse items-start gap-4">
+                    <img src="https://copu.media/wp-content/uploads/2024/02/WhatsApp-Image-2024-02-13-at-7.48.45-AM.jpeg" alt="Marketing experiencial de marca" class="w-1/3 rounded-lg shadow-md">
+                    <div class="flex-1">
+                        <span class="list-title" style="color: #e31b25; font-weight: bold;">Marketing experiencial de marca:</span>
+                        <span>Marcas como Poker han implementado campañas de marketing experiencial de gran éxito. Iniciativas como "La Calle del Sabor POKER" y "Las primeras Olimpiadas para jugar en parche" buscan crear experiencias directas y memorables, consolidando la imagen de la marca como un facilitador de la amistad y los buenos momentos.</span>
+                    </div>
+                </li>
+            </ul>
+            <div style="clear: both;"></div>
+        </div>
 
-        <!-- Brand Content Section -->
-        <section id="contenido" class="mb-16 pattern-bg-white rounded-lg shadow-lg p-8 pattern-bg">
-             <h3 class="font-display text-2xl font-bold border-b-4 border-red-600 pb-2 mb-6 inline-block">2. Contenido de Marca</h3>
-             <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div class="grid grid-cols-2 gap-4">
-                    <img src="https://placehold.co/300x300/000000/fefefd?text=Post+Instagram" alt="[Imagen de un post de Instagram de Poker]" class="rounded-lg shadow-md">
-                    <img src="https://placehold.co/300x300/fefefd/000000?text=Historia" alt="[Imagen de una historia de Instagram de Poker]" class="rounded-lg shadow-md border">
-                    <img src="https://placehold.co/300x300/fefefd/e31b25?text=TikTok" alt="[Imagen de un video de TikTok de Poker]" class="rounded-lg shadow-md border">
-                    <img src="https://placehold.co/300x300/e31b25/fefefd?text=Meme" alt="[Imagen de un meme de Poker]" class="rounded-lg shadow-md">
-                </div>
-                <div>
-                    <h4 class="font-bold text-xl mb-2">Historias que unen</h4>
-                    <p>Nuestro contenido digital celebra la amistad en todas sus formas. A través de redes sociales, creamos conversaciones y compartimos historias auténticas que reflejan el día a día de nuestros consumidores. Fomentamos la interacción con campañas, memes y colaboraciones que hablan el mismo idioma de nuestro público, manteniendo a Poker como la marca cómplice de los buenos momentos.</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Brand Architecture Section -->
-        <section id="arquitectura" class="mb-16">
-            <h3 class="font-display text-2xl font-bold border-b-4 border-red-600 pb-2 mb-8 inline-block">3. Arquitectura de la Marcas</h3>
-            <div class="pattern-bg-black rounded-lg shadow-lg p-8 pattern-bg text-center">
-                <p class="text-lg text-gray-300">La forma en que se organiza y relaciona el portafolio de marcas bajo la empresa.</p>
-                <div class="mt-4 flex justify-center items-center space-x-4 md:space-x-8 flex-wrap">
-                    <span class="text-2xl font-bold text-white">Águila</span>
-                    <span class="text-2xl font-bold text-red-500 underline">Poker</span>
-                    <span class="text-2xl font-bold text-white">Club Colombia</span>
-                </div>
-            </div>
-        </section>
+        <!-- Contenido de Marca Section -->
+        <div>
+            <h2 class="section-title text-3xl">Contenido de marca</h2>
+            <p class="mb-4">
+                El contenido de marca es una pieza clave en la estrategia de Bavaria para promocionarse y conectar con su audiencia. Con un enfoque en la sostenibilidad, la historia y la cultura cervecera, la compañía crea un ecosistema de información que nutre la relación con sus consumidores.
+            </p>
+            <ul class="space-y-4">
+                <li class="list-item flex flex-row-reverse items-start gap-4">
+                    <img src="https://copu.media/wp-content/uploads/2024/12/WhatsApp-Image-2024-12-10-at-9.48.30-AM.jpeg" alt="Logotipo de Bavaria Sostenibilidad" class="w-1/3 rounded-lg shadow-md">
+                    <div class="flex-1">
+                        <span class="list-title" style="color: #e31b25; font-weight: bold;">Contenido de sostenibilidad y responsabilidad social:</span>
+                        <span>La empresa produce una gran cantidad de contenido para destacar sus iniciativas de sostenibilidad y su impacto positivo en las comunidades. Algunos ejemplos incluyen programas como "Mejor Con Cerveza," el apoyo al agro colombiano, el respaldo a pequeños emprendedores a través de "Soy de tienda," la protección de páramos y el uso de energía renovable en sus operaciones.</span>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <span class="list-title" style="color: #e31b25; font-weight: bold;">Contenido educativo y cultural:</span>
+                    <span>A través de su sitio web y otros canales, Bavaria ofrece contenido valioso sobre la historia de la cerveza, los ingredientes, el proceso de fabricación y la cultura del consumo. El "Podcast Bavaria" es un ejemplo de cómo utilizan nuevos formatos para educar y entretener a sus audiencias.</span>
+                </li>
+                <li class="list-item flex flex-row-reverse items-start gap-4">
+                    <img src="https://akorde.co/wp-content/uploads/2022/09/Pagina-bavaria-.png" alt="Campaña de Consumo Responsable Bavaria" class="w-1/3 rounded-lg shadow-md">
+                    <div class="flex-1">
+                        <span class="list-title" style="color: #e31b25; font-weight: bold;">Campaña de consumo responsable:</span>
+                        <span>Mediante sus comunicaciones comerciales y diversas campañas, la marca promueve activamente el mensaje "Cuando tome no maneje, entregue las llaves." Esta iniciativa de marketing social demuestra su compromiso con el bienestar de sus consumidores y la seguridad vial.</span>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <span class="list-title" style="color: #e31b25; font-weight: bold;">Marketing digital y redes sociales:</span>
+                    <span>Bavaria utiliza la segmentación de audiencias y la promoción en línea para lanzar nuevos productos y aumentar la visibilidad de sus marcas. A través de campañas digitales, no solo se genera un incremento en las ventas, sino que también se mantiene una conexión fluida con los consumidores en plataformas de alto tráfico, lo que permite una integración entre el mundo online y los puntos de venta físicos.</span>
+                </li>
+            </ul>
+            <div style="clear: both;"></div>
+        </div>
 
+        <!-- Arquitectura de Marca Section -->
+        <div>
+            <h2 class="section-title text-3xl">Arquitectura de marca</h2>
+            <p class="mb-4">
+                Como parte de la multinacional Anheuser-Busch InBev (AB InBev), Bavaria gestiona un portafolio de marcas bajo una estructura que se puede describir como una estrategia de "casa de marcas" (house of brands), donde cada una tiene su propia identidad, pero se beneficia del respaldo y la reputación de la empresa matriz.
+            </p>
+            <ul class="space-y-4">
+                <li class="list-item flex flex-row-reverse items-start gap-4">
+                    <img src="https://www.bavaria.co/sites/g/files/seuoyk1666/files/2023-10/pregunta2_0.png" alt="Botellas de cerveza del portafolio de Bavaria." class="w-1/3 rounded-lg shadow-md">
+                    <div class="flex-1">
+                        <span class="list-title" style="color: #e31b25; font-weight: bold;">Portafolio diversificado por segmento:</span>
+                        <span>Bavaria cuenta con un amplio y balanceado portafolio que atiende a diferentes segmentos del mercado y ocasiones de consumo. Por un lado, tiene marcas locales de gran tradición y liderazgo como <strong>Águila</strong>, <strong>Poker</strong>, <strong>Club Colombia</strong> y <strong>Pilsen</strong>, que son el pilar de su negocio en el país. Por otro lado, distribuye y produce marcas globales de AB InBev, como <strong>Corona</strong>, <strong>Budweiser</strong>, <strong>Stella Artois</strong> y <strong>Michelob Ultra</strong>, que se enfocan en el segmento premium y de estilo de vida.</span>
+                    </div>
+                </li>
+                <li class="list-item flex flex-row-reverse items-start gap-4">
+                    <img src="https://prnoticias.com/wp-content/uploads/2022/02/bavaria-1.jpg" alt="Logotipo de Bavaria en un edificio." class="w-1/3 rounded-lg shadow-md">
+                    <div class="flex-1">
+                        <span class="list-title" style="color: #e31b25; font-weight: bold;">Innovación constante en el portafolio:</span>
+                        <span>La empresa es muy dinámica y se mantiene a la vanguardia del mercado lanzando nuevos productos y variantes. Ejemplos recientes incluyen <strong>Poker Pura Malta</strong> y <strong>Club Colombia Doble Malta</strong>. Además, han incursionado en bebidas con base en ingredientes locales, como la cerveza <strong>NATIVA</strong> (a base de yuca), y han diversificado su oferta con productos no alcohólicos como <strong>Pony Malta</strong> y <strong>Agua Zalva</strong>.</span>
+                    </div>
+                </li>
+                <li class="list-item flex flex-row-reverse items-start gap-4">
+                    <img src="https://globalstconnectblog.wordpress.com/wp-content/uploads/2019/04/bavaria.png?w=640" alt="Botella de Club Colombia." class="w-1/3 rounded-lg shadow-md">
+                    <div class="flex-1">
+                        <span class="list-title" style="color: #e31b25; font-weight: bold;">Estrategia de marca independiente:</span>
+                        <span>Cada marca en el portafolio de Bavaria se gestiona de manera individual, con su propia identidad, narrativa y propósito. Por ejemplo, <strong>Poker</strong> se enfoca en la amistad, mientras que <strong>Águila</strong> busca refrescar la pasión de los colombianos. La marca corporativa "Bavaria" actúa como un sello de calidad, confiabilidad y reputación, asociándose con las iniciativas de sostenibilidad, innovación y responsabilidad social.</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </main>
 
-    <footer class="bg-gray-800 text-white mt-16">
-        <div class="container mx-auto px-6 py-4 text-center text-sm">
-            <p>&copy; 2024 Cerveza Poker. Todos los derechos reservados.</p>
-        </div>
+    <footer class="py-6 mt-10 text-center text-gray-400">
+        <p>&copy; 2025 Análisis de Marca Bavaria. Todos los derechos reservados.</p>
     </footer>
+</div>
 
 </body>
 </html>
